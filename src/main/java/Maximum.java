@@ -10,13 +10,23 @@ public class Maximum {
         System.out.println("Maximum integer value is " + max);
         return max;
     }
-    public static Float getMaximum(Float value1, Float value2, Float value3) {
+    public static Float getMaximumFloat(Float value1, Float value2, Float value3) {
         Float max = value1;
         if (value2.compareTo(value1) > 0 && value2.compareTo(value3) > 0)
             max = value2;
         else if (value3.compareTo(value2) > 0 && value3.compareTo(value1) > 0)
             max = value3;
         System.out.println("Maximum float value is " + max);
+        return max;
+    }
+    public static String getMaximumString(String firstString, String secondString, String thirdString){
+        String max=firstString;
+        if(secondString.compareTo(max)>0){
+            max=secondString;
+        }
+        if(thirdString.compareTo(max)>0){
+            max=thirdString;
+        }
         return max;
     }
     public static void main(String[] args) {
