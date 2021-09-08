@@ -1,4 +1,3 @@
-import java.util.Arrays;
 public class Maximum<E extends Comparable> {
     E value1;
     E value2;
