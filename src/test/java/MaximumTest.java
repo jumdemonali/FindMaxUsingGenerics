@@ -3,67 +3,79 @@ import org.junit.Test;
  public class MaximumTest {
     @Test
     public void given3Values_WhenGetMaximum_ShouldReturnCorrectValue1() {
-        int actualResult = Maximum.checkMaximum(15, 10, 12);
-        Assert.assertEquals(15, actualResult);
+        Integer[] inputarray={15,18,19,16,25};
+        int actualResult = Maximum.checkMaximum(inputarray);
+        Assert.assertEquals(25, actualResult);
     }
     @Test
     public void given3Values_WhenGetMaximum_ShouldReturnCorrectValue2() {
-        int actualResult = Maximum.checkMaximum(10, 15, 12);
+        Integer[] inputarray={10, 15, 12,9};
+        int actualResult = Maximum.checkMaximum(inputarray);
         Assert.assertEquals(15, actualResult);
     }
      @Test
      public void given3Values_WhenGetMaximum_ShouldReturnCorrectValue3() {
-         int actualResult = Maximum.checkMaximum(10, 12, 15);
+         Integer[] inputarray={15, 10, 12, 15};
+         int actualResult = Maximum.checkMaximum(inputarray);
          Assert.assertEquals(15, actualResult);
      }
     @Test
     public void givenThreeFloats_FindMaximumNumberTestCase1(){
-        float actualValue = Maximum.checkMaximum(900f,600f,700f);
+        Float[] inputarray={8.3f, 900f,600f,700f};
+        float actualValue = Maximum.checkMaximum(inputarray);
         Assert.assertEquals(900f,actualValue, 0);
     }
      @Test
      public void givenThreeFloats_FindMaximumNumberTestCase2(){
-         float actualValue = Maximum.checkMaximum(600f,900f,700f);
+         Float[] inputarray={600f,900f,700f,800f};
+         float actualValue = Maximum.checkMaximum(inputarray);
          Assert.assertEquals(900f,actualValue, 0);
      }
      @Test
      public void givenThreeFloats_FindMaximumNumberTestCase3(){
-         float actualValue = Maximum.checkMaximum(600f,700f,900f);
+         Float[] inputarray={600f,700f,900f,150f};
+         float actualValue = Maximum.checkMaximum(inputarray);
          Assert.assertEquals(900f,actualValue, 0);
      }
     @Test
     public void givenThreeStrings_FindMaximumTestCase1(){
-        String result=Maximum.checkMaximum("Peach","Apple","Banana");
+        String[] inputarray={"Peach","Apple","Banana"};
+        String result=Maximum.checkMaximum(inputarray);
         Assert.assertEquals("Peach",result);
     }
      @Test
      public void givenThreeStrings_FindMaximumTestCase2(){
-         String result=Maximum.checkMaximum("Apple","Peach","Banana");
+         String[] inputarray={"Apple","Peach","Banana"};
+         String result=Maximum.checkMaximum(inputarray);
          Assert.assertEquals("Peach",result);
      }
      @Test
      public void givenThreeStrings_FindMaximumTestCase3(){
-         String result=Maximum.checkMaximum("Apple","Banana","Peach");
+         String[] inputarray={"Apple","Peach","Banana"};
+         String result=Maximum.checkMaximum(inputarray);
          Assert.assertEquals("Peach",result);
      }
      @Test
      public void givenThreeInteger_FindMaximumUsingClass(){
-         Maximum getmax =new Maximum(1,2,3);
+         Integer[] inputarray={15, 10, 12,25};
+         Maximum getmax =new Maximum(inputarray);
          int max=(int)(getmax.checkMaximum());
-         Assert.assertEquals(3,max);
+         Assert.assertEquals(25,max);
      }
 
      @Test
      public void givenThreeFloat_FindMaximumUsingClass(){
-         Maximum getmax =new Maximum(5.1f,5.5f,1.5f);
+         Float[] inputarray={600f,700f,900f,150f};
+         Maximum getmax =new Maximum(inputarray);
          float max=(float)(getmax.checkMaximum());
-         Assert.assertEquals(5.5f,max,0.0f);
+         Assert.assertEquals(900f,max,0.0f);
      }
 
      @Test
      public void givenThreeString_FindMaximumUsingClass() {
-         Maximum getmax =new Maximum("Apple","Peaches","Banana");
+         String[] inputarray={"Peach","Apple","Banana"};
+         Maximum getmax =new Maximum(inputarray);
          String max=(String)(getmax.checkMaximum());
-         Assert.assertEquals("Peaches",max);
+         Assert.assertEquals("Peach",max);
      }
  }
