@@ -1,6 +1,6 @@
 public class Maximum<E extends Comparable> {
     E[] inputarray;
-
+    E max;
     Maximum(E[] inputarray)
     {
         this.inputarray=inputarray;
@@ -20,5 +20,12 @@ public class Maximum<E extends Comparable> {
             }
         }
         return max;
+    }
+    public static<E> void printarray(E[] inputarray,E max)
+    {
+        for(E element : inputarray) {
+            System.out.printf("%s ", element);
+        }
+        System.out.println("Max is "+max);
     }
 }
